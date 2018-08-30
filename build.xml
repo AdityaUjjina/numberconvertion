@@ -39,7 +39,7 @@
 		<mkdir dir="${dist}" />
 
 		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
-		<jar jarfile="/var/jenkins_home">
+		<jar jarfile="/var/jenkins_home/numberConverter.jar">
 			<fileset dir="${build}" />
 			<manifest>
 				<attribute name="Main-Class" value="com.devops.NumberConvertion" />
