@@ -54,7 +54,7 @@
 	  <ruleset>rulesets/java/basics.xml</ruleset>
 	  <formatter type="xml" toFile="build/pmd.xml">
 	  <fileset dir="src">
-	    <include name="**/*.java">
+	    <include name="**/*.java"/>
 	  </fileset>
 	<pmd>
   </target>
