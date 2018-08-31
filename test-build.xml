@@ -52,7 +52,7 @@
 	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.classpath"/>
 	<pmd shortFilenames="true">
 	  <ruleset>rulesets/java/basics.xml</ruleset>
-	  <formatter type="xml" toFile="build/pmd.xml">
+	  <formatter type="xml" toFile="build/pmd.xml"/>
 	  <fileset dir="src">
 	    <include name="**/*.java"/>
 	  </fileset>
