@@ -35,7 +35,7 @@
           <path location="${test.build.dir}"/>
         </classpath>
         <test name="com.devops.NumberConvertionTest"
-                haltonfailure="no" todir="${report.dir}">
+                haltonfailure="yes" todir="${report.dir}">
                 <formatter type="xml" />
         </test>
     </junit>
