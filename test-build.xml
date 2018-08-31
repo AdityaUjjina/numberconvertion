@@ -7,10 +7,16 @@
 
   <path id="classpath">
     <pathelement location="src/lib/log4j-1.2.17.jar" />
-    <pathelement location="src/lib/junit.jar"/>
-    <pathelement location="src/lib/org.hamcrest.core_1.3.0.jar"/>
+    <pathelement location="test/lib/junit.jar"/>
+    <pathelement location="test/lib/org.hamcrest.core_1.3.0.jar"/>
     <pathelement location="${main.build.dir}"/>
     <pathelement location="${test.build.dir}"/>
+  </path>
+
+  <path id="pmd.classpath">
+    <fileset dir="src/lib">
+      <include name="**/*.jar"/>
+    </fileset>
   </path>
 
   <target name="compile">
@@ -40,4 +46,17 @@
         </test>
     </junit>
   </target>
+
+  <target name="pmd">
+    <mkdir dir="build"/>
+    <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.classpath"/>
+    <pmd shortFilenames="true">
+      <ruleset>rulesets/java/basic.xml</ruleset>
+      <formatter type="xml" toFile="build/pmd.xml"/>
+      <fileset dir="src">
+        <include name="**/*.java"/>
+      </fileset>
+    </pmd>
+  </target>
+
 </project>
