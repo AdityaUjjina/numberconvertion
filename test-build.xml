@@ -56,6 +56,6 @@
 	  <fileset dir="src">
 	    <include name="**/*.java"/>
 	  </fileset>
-	<pmd>
+	</pmd>
   </target>
 </project>
