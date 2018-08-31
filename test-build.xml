@@ -1,8 +1,8 @@
-<project name="junit-example">
+<project name="junit-example" default="test" basedir=".">
   <property name="main.build.dir" value="build/main"/>
-  <property name="main.src.dir" value="src/"/>
+  <property name="main.src.dir" value="src/com/devops"/>
   <property name="test.build.dir" value="build/test"/>
-  <property name="test.src.dir" value="test/"/>
+  <property name="test.src.dir" value="test/com/devops"/>
 
   <path id="classpath.test">
     <pathelement location="src/lib/junit.jar"/>
