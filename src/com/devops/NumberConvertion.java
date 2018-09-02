@@ -25,18 +25,18 @@ public class NumberConvertion {
 			logger.info("Provide number between 1 to 999 to convert");
 			Scanner stdin = new Scanner(System.in);
 			int input = stdin.nextInt();
-			logger.info("Input: " + input);
+			logger.debug(input);
 			String verbaloutput = exitcallverification(input);
 			if (verbaloutput.equals(EXIT_PROGRAM)) {
 				logger.info("Exit call received");
 				stdin.close();
 				System.exit(0);
 			} else {
-				logger.info("Output: " + verbaloutput);
+				logger.info(verbaloutput);
 				stdio();
 			}
 		} catch (Exception e) {
-			logger.warn("Only integers are allowed");
+			logger.warn("Invalid number");
 			logger.error(e);
 			stdio();
 		}
