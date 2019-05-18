@@ -29,7 +29,6 @@ public class NumberConvertion {
 			if (verbaloutput.equals(EXIT_PROGRAM)) {
 				logger.info("Exit call received");
 				stdin.close();
-				System.exit(0);
 			} else {
 				logger.info(verbaloutput);
 				stdio();
