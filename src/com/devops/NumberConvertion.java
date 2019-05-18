@@ -28,7 +28,7 @@ public class NumberConvertion {
 			String verbaloutput = exitcallverification(input);
 			if (verbaloutput.equals(EXIT_PROGRAM)) {
 				logger.info("Exit call received");
-				stdin.close();
+				stdin.close(); // exit
 			} else {
 				logger.info(verbaloutput);
 				stdio();
